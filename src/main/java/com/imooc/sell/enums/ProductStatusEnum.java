@@ -5,12 +5,21 @@ import lombok.Getter;
 
 
 //商品状态枚举
-@Getter
-public enum ProductStatusEnum implements CodeEnum {
+//@Getter
+
+/**
+* @ClassName: ProductStatusEnum
+* @Description: 商品状态枚举，要提供get，set方法
+* @author ruimeng
+* @date 2018年5月23日 下午8:19:26
+*
+*/ 
+public enum ProductStatusEnum  {
     UP(0, "在架"),
     DOWN(1, "下架");
+	
 
-    private Integer code;
+	private Integer code;
 
     private String message;
 
@@ -19,9 +28,21 @@ public enum ProductStatusEnum implements CodeEnum {
         this.message = message;
     }
 
-
-    @Override
     public Integer getCode() {
-        return null;
-    }
+		return code;
+	}
+
+	public void setCode(Integer code) {
+		this.code = code;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+
 }
