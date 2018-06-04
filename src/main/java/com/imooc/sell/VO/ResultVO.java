@@ -1,5 +1,7 @@
 package com.imooc.sell.VO;
 
+import java.util.List;
+
 import lombok.Data;
 
 /**
@@ -24,7 +26,7 @@ public class ResultVO<T> {
 	private String msg ;
 	
 	/** 返回的具体内容 */
-	private T data;
+	private List<T> data;
 	
 	public Integer getCode() {
 		return code;
@@ -42,12 +44,13 @@ public class ResultVO<T> {
 		this.msg = msg;
 	}
 
-	public T getData() {
+	public List<T> getData() {
 		return data;
 	}
 
-	public void setData(T data) {
+	public void setData(List<T> data) {
 		this.data = data;
 	}
+
 
 }

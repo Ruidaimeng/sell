@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import com.imooc.sell.dataobject.ProductInfo;
+import com.imooc.sell.dto.CarDTO;
 
 /**
 * @ClassName: ProductService
@@ -31,7 +32,9 @@ public interface ProductService {
 	ProductInfo save(ProductInfo productInfo);
 	
 	//加库存
+	void increaseStock(List<CarDTO> listCarDTO);
+	
 	
 	//减库存
-	 
+	void decreaseStock(List<CarDTO> listCarDTO); 
 }

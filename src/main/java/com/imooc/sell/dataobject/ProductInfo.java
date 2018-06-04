@@ -1,15 +1,15 @@
 package com.imooc.sell.dataobject;
 
-import com.imooc.sell.enums.ProductStatusEnum;
-import lombok.Data;
+import java.math.BigDecimal;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.DynamicUpdate;
 
-import java.math.BigDecimal;
-import java.util.Date;
+import com.imooc.sell.enums.ProductStatusEnum;
+
+import lombok.Data;
 
 @Entity
 @DynamicUpdate //动态更新时间,这样，新建的对象，没有创建时间属性，也会自动赋值的
