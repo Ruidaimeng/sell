@@ -2,6 +2,8 @@ package com.imooc.sell.VO;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import lombok.Data;
 
 /**
@@ -16,6 +18,7 @@ import lombok.Data;
 //注意这里Data注解没有起作用，导致没有get和set方法，这样controller，给页面返回对象是，无法序列化，出错。
 
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResultVO<T> {
 	
 
