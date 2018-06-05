@@ -18,7 +18,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import com.imooc.sell.LoggerTest2;
 import com.imooc.sell.converter.OrderMaster2OrderDTO;
 import com.imooc.sell.dataobject.OrderDetail;
 import com.imooc.sell.dataobject.OrderMaster;
@@ -97,11 +96,10 @@ public class OrderServiceImpl implements OrderService {
 		//3、写入订单表（OrderMaster）
 		
 		OrderMaster oederMaster = new OrderMaster();
-
+		orderDTO.setOrderId(orderId);
 		BeanUtils.copyProperties(orderDTO, oederMaster);//把商品信息拷贝到订单详情信息中去
 		//给orderMaster赋值，要在复制属性值之后。
 		oederMaster.setOrderAmount(orderAmount);
-		oederMaster.setOrderId(orderId);
 		orderMasterRepository.save(oederMaster);
 		
 		

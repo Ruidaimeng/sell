@@ -10,12 +10,14 @@ package com.imooc.sell.enums;
 */ 
 public enum ResultEnum {
 
+	FORM_RARAM_ERROOR(01,"参数错误"),
 	PRODUCT_NOT_EXIST(10,"商品不存在"),
 	PRODUCT_STOCK_ERROR(11,"库存错误"),
 	ORDER_NOT_EXIST(11,"商品不存在"),
 	ORDER_UPDATE_FAIL(13,"订单状态更新失败"),
 	ORDER_STATUS_EMPTY(14,"订单详情不存在"),
 	ORDER_STATUS_ERROR(12,"商品不存在"),
+	CART_EMPTY_ERROR(16,"购物车为空"),
 	PAY_STATUS_ERROR(15	,"商品不存在"), PAY_UPDATE_FAIL(16	,"支付失败"),
 	;
 

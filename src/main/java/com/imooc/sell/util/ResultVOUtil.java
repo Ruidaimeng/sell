@@ -7,7 +7,7 @@ import com.imooc.sell.VO.ResultVO;
 public class ResultVOUtil {
 	
 	@SuppressWarnings("unchecked")
-	public static ResultVO<Object> success(Object object) {
+	public static ResultVO success(Object object) {
 		
 		ResultVO<Object>  resultVO = new ResultVO<>();
 		resultVO .setCode(1);

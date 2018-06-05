@@ -20,6 +20,11 @@ public class SellException extends RuntimeException {
 		super(resultEnum.getMsg());
 		this.code=resultEnum.getCode();
 	}
-	
+	//注意构造方法的书写，父类中的一个参数的传值
+	public SellException(Integer code,String msg){
+		super(msg);
+		this.code=code;
+		;
+	}
 
 }
